@@ -1,0 +1,12 @@
+{
+  "name": "purescript-geom",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "purescript-math": "~0.1.0"
+  },
+  "devDependencies": {
+    "purescript-monoid": "~0.1.4",
+    "purescript-quickcheck": "~0.1.3"
+  }
+}
