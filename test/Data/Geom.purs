@@ -5,7 +5,6 @@ import Data.Geom.Monoid
 import Data.Geom.QuickCheck
 import Data.Geom.Show
 import Test.QuickCheck
-import Test.QuickCheck.LCG
 import Test.Properties
 
 equalityWorks :: Pair -> Boolean
