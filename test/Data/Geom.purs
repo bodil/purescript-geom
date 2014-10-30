@@ -1,6 +1,6 @@
 module Test.Data.Geom where
 
-import Data.Geom
+import Data.Geom(Pair(..), subPairs)
 import Data.Geom.Monoid
 import Data.Geom.QuickCheck
 import Data.Geom.Show

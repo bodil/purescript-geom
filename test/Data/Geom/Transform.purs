@@ -1,6 +1,6 @@
 module Test.Data.Geom.Transform where
 
-import Data.Geom
+import Data.Geom(Point(..))
 import Data.Geom.QuickCheck
 import Data.Geom.Show
 import Data.Geom.Transform

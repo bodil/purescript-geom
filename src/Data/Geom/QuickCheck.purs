@@ -1,9 +1,10 @@
 module Data.Geom.QuickCheck where
 
-import Data.Geom
+import Data.Geom(Pair(..))
 import Test.QuickCheck
 import Test.QuickCheck.LCG
 
+mkPair :: Gen Pair
 mkPair = do
   x <- uniform
   y <- uniform

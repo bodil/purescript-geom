@@ -4,6 +4,7 @@ import Data.Geom.Transform
 import Test.QuickCheck
 import Test.QuickCheck.LCG
 
+mkTransform :: Gen Transform
 mkTransform = do
   a <- uniform
   b <- uniform
