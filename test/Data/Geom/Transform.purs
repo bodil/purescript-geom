@@ -8,7 +8,6 @@ import Data.Geom.Transform.Monoid
 import Data.Geom.Transform.QuickCheck
 import Data.Geom.Transform.Show
 import Test.QuickCheck
-import Test.QuickCheck.LCG
 import Test.Properties
 
 equalityWorks :: Transform -> Boolean
