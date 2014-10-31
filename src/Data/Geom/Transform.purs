@@ -43,7 +43,7 @@ scaleX s = Transform s 0 0 0 1 0 0 0 1
 scaleY :: Number -> Transform
 scaleY s = Transform 1 0 0 0 s 0 0 0 1
 
--- TODO Potential candidate for a foreign function because optimisation?
+-- |Add two matrices together.
 compose :: Transform -> Transform -> Transform
 compose (Transform a1 b1 c1 p1 q1 r1 u1 v1 w1)
         (Transform a2 b2 c2 p2 q2 r2 u2 v2 w2) =
