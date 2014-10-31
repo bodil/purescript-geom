@@ -34,10 +34,9 @@ rotate angle = let c = cos angle
 -- |Create a transform that rotates by a given angle around a given point.
 rotateAround :: Number -> Number -> Number -> Transform
 rotateAround x y angle =
-  let r00 = cos angle
-      r10 = sin angle
-      r01 = (0 - r10)
-  in Transform r00 r01 (x - (r00*x) - (r01*y)) r10 r00 (y - (r10*x) - (r00*y)) 0 0 1
+  translate x y <>
+  rotate angle <>
+  translate (-x) (-y)
 
 -- |Create a transform that scales by a given factor.
 scale :: Number -> Transform
