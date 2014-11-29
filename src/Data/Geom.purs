@@ -1,5 +1,6 @@
 module Data.Geom where
 
+import Data.Monoid
 import Math
 
 data Pair = Pair Number Number
@@ -21,3 +22,10 @@ type Size = Pair
 
 instance semigroupPair :: Semigroup Pair where
   (<>) = addPairs
+
+instance monoidPair :: Monoid Pair where
+  mempty = Pair 0 0
+
+instance showPair :: Show Pair where
+  show (Pair x y) = "(" ++ round x ++ ", " ++ round y ++ ")"
+    where round a = show $ ((a * 10000) .|. 0) / 10000

@@ -2,7 +2,7 @@ module Data.Geom.Transform.QuickCheck where
 
 import Data.Geom.Transform
 import Test.QuickCheck
-import Test.QuickCheck.LCG
+import Test.QuickCheck.Gen
 
 mkTransform :: Gen Transform
 mkTransform = do

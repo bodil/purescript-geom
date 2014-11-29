@@ -1,9 +1,7 @@
 module Test.Data.Geom where
 
 import Data.Geom(Pair(..), subPairs)
-import Data.Geom.Monoid
 import Data.Geom.QuickCheck
-import Data.Geom.Show
 import Test.QuickCheck
 import Test.Properties
 

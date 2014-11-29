@@ -2,11 +2,8 @@ module Test.Data.Geom.Transform where
 
 import Data.Geom(Point(..))
 import Data.Geom.QuickCheck
-import Data.Geom.Show
 import Data.Geom.Transform
-import Data.Geom.Transform.Monoid
 import Data.Geom.Transform.QuickCheck
-import Data.Geom.Transform.Show
 import Test.QuickCheck
 import Test.Properties
 

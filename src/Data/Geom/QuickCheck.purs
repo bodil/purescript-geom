@@ -2,7 +2,7 @@ module Data.Geom.QuickCheck where
 
 import Data.Geom(Pair(..))
 import Test.QuickCheck
-import Test.QuickCheck.LCG
+import Test.QuickCheck.Gen
 
 mkPair :: Gen Pair
 mkPair = do

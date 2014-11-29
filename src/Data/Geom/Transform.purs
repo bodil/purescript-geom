@@ -1,6 +1,7 @@
 module Data.Geom.Transform where
 
 import Data.Geom
+import Data.Monoid
 import Math
 
 data Transform = Transform Number Number Number Number Number Number Number Number Number
@@ -91,6 +92,15 @@ transformPoint :: Transform -> Point -> Point
 transformPoint (Transform a b c d e f g h i) (Pair x y) =
   Pair ((a*x) + (b*y) + c) ((d*x) + (e*y) + f)
 
--- Of course transforms form semigroups.
 instance semigroupTransform :: Semigroup Transform where
   (<>) = compose
+
+instance monoidTransform :: Monoid Transform where
+  mempty = reset
+
+instance showTransform :: Show Transform where
+  show (Transform a b c d e f g h i) =
+    "Transform(" ++ round a ++ " " ++ round b ++ " " ++ round c ++
+    "  " ++ round d ++ " " ++ round e ++ " " ++ round f ++
+    "  " ++ round g ++ " " ++ round h ++ " " ++ round i ++ ")"
+    where round a = show $ ((a * 10000) .|. 0) / 10000
