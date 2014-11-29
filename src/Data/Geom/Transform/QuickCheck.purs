@@ -15,7 +15,8 @@ mkTransform = do
   g <- uniform
   h <- uniform
   i <- uniform
-  return $ Transform a b c d e f g h i
+  o <- uniform
+  return $ Transform a b c d e f g h i o
 
 instance arbTransform :: Arbitrary Transform where
   arbitrary = mkTransform
